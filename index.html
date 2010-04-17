@@ -18,55 +18,63 @@
         <h1>Trinidad</h1>
       </div>
       <div id="content">
-        
-        <div class="note">
-          <p>This project was initially called Tomcat-rails. Due to legal issues ralated with the apache tomcat's trademarks it has been renamed.</p>
-          
-          <p>You can read more on these issues in <a href="http://thinkincode.net/2009/7/7/tomcat-rails-is-now-called-trinidad">my blog</a>.</p>
-        </div>
-        
-        <p>Trinidad allows you to run rails applications within an embedded <a href="http://tomcat.apache.org">Apache Tomcat</a> container.</p>
-        
+        <p>Trinidad allows you to run any Rack based application within an embedded <a href="http://tomcat.apache.org">Apache Tomcat</a> container.</p>
+
         <p>Apache Tomcat is a lightweight java web server developed and released under the <a href="http://apache.org">Apache Software Foundation</a>.</p>
-        
+
         <div>
           <h2>installing</h2>
-          
-          <div class="highlight"><pre><span class="n">jgem</span> <span class="n">install</span> <span class="n">trinidad</span>
-          </pre></div>
+
+          <div class="highlight"><pre><span class="n">jgem</span> <span class="n">install</span> <span class="n">trinidad</span></pre></div>
         <div> <!-- end installing-->
-          
+
         <div>
           <h2>usage</h2>
-          
-          <div class="highlight"><pre><span class="n">cd</span> <span class="n">myrailsapp</span>
-<span class="n">jruby</span> <span class="o">-</span><span class="n">S</span> <span class="n">trinidad</span>
-          </pre></div>
-          
+
+          <div class="highlight"><pre><span class="n">cd myrailsapp</span>
+<span class="n">jruby -S trinidad</span></pre></div>
+
         </div> <!-- end usage -->
-        
+
         <div>
           <h2>configuration</h2>
-            
-          <p>check the currently supported configuration options in the <a href="http://github.com/calavera/trinidad/blob/447c457bfaaee8b598de40752a5f892beb7ed9e4/README.rdoc">readme page</a>.
+
+          <p>Trinidad accepts some configuration arguments from the command line, you can find the supported options in the <a href="http://github.com/calavera/trinidad/blob/master/README.rdoc">readme page</a>.
+          <p>Further advanced options can also be found in the <a href="http://wiki.github.com/calavera/trinidad/advanced-configuration">project's wiki</a>.
         </div> <!-- end configuration -->
-        
+
+        <div>
+          <h2>extensions</h2>
+
+          <p>Trinidad is modularized. You just need the core of the project to run any application but you can also find some advanced features available as independent gems, so the core remains lightweight until you need them.</p>
+          <p>This is the list of the current available extensions:</p>
+
+          <dl>
+            <dt><a href="http://github.com/calavera/trinidad-dbpool">Database connection pooling</a></dt>
+            <dd>Enables database connection pooling through Tomcat and JNDI.</dd>
+
+            <dt><a href="http://github.com/calavera/trinidad_daemon_extension">Daemon</a></dt>
+            <dd>Enables to run Trinidad as a daemon. Available for unix, solaris, and macos x systems.</dd>
+          </dl>
+
+          <p>You can find further information on how to write your own extension in <a href="http://wiki.github.com/calavera/trinidad/extensions">its wiki page</a>.</p>
+        </div> <!-- end extensions -->
+
         <div>
           <h2>getting the source</h2>
-          
+
           <p> from github: <a href="http://github.com/calavera/trinidad/tree/master">http://github.com/calavera/trinidad/tree/master</a></p>
-          
-          <div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">calavera</span><span class="o">/</span><span class="n">trinidad</span>.</span><span class="n">git</span>
-          </pre></div>
-          
+
+          <div class="highlight"><pre><span class="n">git clone git://github.com/calavera/trinidad.git</span></pre></div>
+
         </div>  <!-- end getting the source -->
-        
+
         <div>
           <h2>license</h2>
-          
+
           <p>Trinidad is distributed under the terms of The MIT License.</p>
-          </p>Copyright © 2009 <a href="mailto:calavera@apache.org">David Calavera</a></p>
-          
+          </p>Copyright © 2009-2010 <a href="mailto:calavera@apache.org">David Calavera</a></p>
+
           <p class="ack">theme grabbed from my good friend <a href="http://lmcavalle.com">Luismi Cavalle</a>'s blog</p>
         </div> <!-- end license -->
       </div>

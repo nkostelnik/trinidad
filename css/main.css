@@ -79,3 +79,12 @@ pre {
   
   padding: 1em;
 }
+
+dt {
+  padding-left: 1.2em;
+}
+
+dd {
+  margin: 0 0 1em 0;
+  padding-left: 1.2em;
+}
